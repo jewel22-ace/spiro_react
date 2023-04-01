@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { TouchableOpacity, Image, StyleSheet, Text, View } from 'react-native';
 import Title from '../components/title';
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Title />
@@ -16,8 +16,10 @@ const Home = () => {
                     resizeMode='contain'
                 />
             </View>
-            <TouchableOpacity>
-                <Text>Button</Text>
+            <TouchableOpacity
+                onPress={() => navigation.navigate("Quiz")}
+                style={styles.button}>
+                <Text style={styles.button_text}>START</Text>
             </TouchableOpacity>
         </View>
     );
@@ -25,6 +27,11 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
+    container: {
+        paddingTop: 40,
+        paddingHorizontal: 20,
+    },
+
     banner: {
         height: 300,
         width: 300,
@@ -33,5 +40,17 @@ const styles = StyleSheet.create({
     ban_cont: {
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    button: {
+        width: '100%',
+        backgroundColor: '#90E0EF',
+        padding: 20,
+        borderRadius: 16,
+        alignItems: 'center',
+    },
+    button_text: {
+        fontSize: 24,
+        fontWeight: 600,
+        color: 'white',
     },
 });

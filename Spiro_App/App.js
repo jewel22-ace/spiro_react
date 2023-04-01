@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Home from './screens/home';
+import { NavigationContainer } from '@react-navigation/native';
 
+import MyStack from './navigation';
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Home />
-    </View>
+
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
+
   );
 }
 export default App;
