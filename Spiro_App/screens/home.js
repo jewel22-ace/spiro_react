@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     container: {
         paddingTop: 40,
         paddingHorizontal: 20,
+        height: '100%'
     },
 
     banner: {
@@ -40,13 +41,15 @@ const styles = StyleSheet.create({
     ban_cont: {
         justifyContent: 'center',
         alignItems: 'center',
+        flex: 1
     },
     button: {
         width: '100%',
-        backgroundColor: '#90E0EF',
+        backgroundColor: '#023E8A',
         padding: 20,
         borderRadius: 16,
         alignItems: 'center',
+        marginBottom: 30,
     },
     button_text: {
         fontSize: 24,

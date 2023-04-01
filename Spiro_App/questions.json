@@ -1,0 +1,68 @@
+{
+    "Questions": [
+        {
+            "questionId": "1",
+            "question": "How often do you sigh?"
+        },
+        {
+            "questionId": "2",
+            "question": "How often do you feel tense or anxious?"
+        },
+        {
+            "questionId": "3",
+            "question": "How often do you yawn?"
+        },
+        {
+            "questionId": "4",
+            "question": "How often do you feel that you cannot get enough air?"
+        },
+        {
+            "questionId": "5",
+            "question": "How often do you feel dizzy or lightheaded?"
+        },
+        {
+            "questionId": "6",
+            "question": "How often do you feel tingling or numbness in your fingers, toes, or around your mouth?"
+        },
+        {
+            "questionId": "7",
+            "question": "How often do you feel a lump in your throat or tightness in your chest?"
+        },
+        {
+            "questionId": "8",
+            "question": "How often do you feel that you are not getting enough sleep?"
+        },
+        {
+            "questionId": "9",
+            "question": "How often do you feel easily fatigued or tired?"
+        },
+        {
+            "questionId": "10",
+            "question": "How often do you feel that your memory is not as good as it used to be?"
+        },
+        {
+            "questionId": "11",
+            "question": "How often do you have difficulty concentrating?"
+        },
+        {
+            "questionId": "12",
+            "question": "How often do you feel irritable or restless?"
+        },
+        {
+            "questionId": "13",
+            "question": "How often do you feel that your heart is pounding or racing?"
+        },
+        {
+            "questionId": "14",
+            "question": "How often do you experience sweating or flushing?"
+        },
+        {
+            "questionId": "15",
+            "question": "How often do you experience nausea or abdominal discomfort?"
+        },
+        {
+            "questionId": "16",
+            "question": "How often do you have dry mouth or throat?"
+        }
+    ]
+}
