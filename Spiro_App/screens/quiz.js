@@ -28,7 +28,7 @@ const Quiz = ({ navigation }) => {
             set_ques_num(ques_num - 1)
             console.log('Back')
             console.log(ques_num)
-        }
+        } else { { navigation.navigate("Patient_Details") } }
 
     }
 

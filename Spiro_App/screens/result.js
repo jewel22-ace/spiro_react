@@ -20,10 +20,27 @@ const Result = ({ navigation }) => {
             <View style={styles.ban_cont}>
                 <Text style={styles.ban_text}>Result</Text>
             </View>
-
-            <View style={styles.score_cont}>
-                <Text style={styles.score_text}>{sum()}</Text>
+            <View style={styles.P_Details_cont}>
+                <View style={styles.label_cont}>
+                    <Text style={styles.label_text}>Patient Name : {global.P_Details[0]}</Text>
+                </View>
+                <View style={styles.label_cont}>
+                    <Text style={styles.label_text}>Patient Age : {global.P_Details[1]}</Text>
+                </View>
+                <View style={styles.label_cont}>
+                    <Text style={styles.label_text}>Patient Weight : {global.P_Details[2]}</Text>
+                </View>
+                <View style={styles.label_cont}>
+                    <Text style={styles.label_text}>Patient Sex : {global.P_Details[3]}</Text>
+                </View>
+                <View style={styles.label_cont}>
+                    <Text style={styles.label_text}>Smoking History : {global.P_Details[4]}</Text>
+                </View>
+                <View style={styles.score_cont}>
+                    <Text style={styles.score_text}>{sum()}</Text>
+                </View>
             </View>
+
             <View>
                 <TouchableOpacity
                     style={styles.button}
@@ -42,14 +59,25 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         height: '100%'
     },
+    label_cont: {
+        padding: 10,
+    },
+    label_text: {
+        fontSize: 12,
+        fontWeight: '500',
+    },
+    P_Details_cont: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 
     ban_cont: {
         justifyContent: 'center',
         alignItems: 'center',
     },
     ban_text: {
-        fontSize: 100,
-        fontWeight: 100,
+        fontSize: 70,
+        fontWeight: 500,
     },
     score_cont: {
         justifyContent: 'center',
