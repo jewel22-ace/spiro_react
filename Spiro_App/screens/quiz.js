@@ -5,9 +5,9 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const Quiz = ({ navigation }) => {
     const [questions, setQuestions] = useState();
-    const [score, setScore] = useState();
     const [ques_num, set_ques_num] = useState(0);
     const getQuiz = async () => {
+        global.score = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         const data = require('../questions.json');
         console.log(data.Questions);
         console.log(data.Questions.length);
@@ -32,8 +32,12 @@ const Quiz = ({ navigation }) => {
 
     }
 
-    const handleOptionClick = (score) => {
-        console.log(score)
+    const handleOptionClick = (s) => {
+        console.log('tap', s)
+        score[ques_num] = s;
+        if (ques_num != 15) { set_ques_num(ques_num + 1) }
+
+        console.log('score', score)
     }
     return (
         <View style={styles.container}>
@@ -42,19 +46,19 @@ const Quiz = ({ navigation }) => {
                     <Text style={styles.ques_text}>{questions[ques_num].question}</Text>
                 </View>
                 <View style={styles.opt_cont}>
-                    <TouchableOpacity style={styles.opt_button}>
-                        <Text style={styles.opt_text} onPress={() => { handleOptionClick(ques_num) }}>Never</Text>
+                    <TouchableOpacity style={styles.opt_button} onPress={() => { handleOptionClick(0) }}>
+                        <Text style={styles.opt_text} >Never</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.opt_button}>
+                    <TouchableOpacity style={styles.opt_button} onPress={() => { handleOptionClick(1) }}>
                         <Text style={styles.opt_text}>Rarely</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.opt_button}>
+                    <TouchableOpacity style={styles.opt_button} onPress={() => { handleOptionClick(2) }}>
                         <Text style={styles.opt_text}>Sometimes</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.opt_button}>
+                    <TouchableOpacity style={styles.opt_button} onPress={() => { handleOptionClick(3) }}>
                         <Text style={styles.opt_text}>Often</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.opt_button}>
+                    <TouchableOpacity style={styles.opt_button} onPress={() => { handleOptionClick(4) }}>
                         <Text style={styles.opt_text}>Very Often</Text>
                     </TouchableOpacity>
                 </View>
